@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lv_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:background="@drawable/set_linear_selector"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+      android:layout_centerVertical="true"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dip"
+        android:layout_toRightOf="@+id/imageView1"
+        android:orientation="vertical" >
+
+        <com.tblin.market.ui.MyTextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@drawable/app_item_color"
+            android:textSize="@dimen/manage_item_large2" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bt_down"
+        android:layout_width="55dip"
+        android:layout_height="65dip"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/download_bt"
+        android:focusable="false" >
+		<ImageView android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/appitem_down_im"
+		    android:layout_centerHorizontal="true"
+		     android:background="@drawable/pause"
+		     android:layout_marginTop="8dip"
+		    />
+        <Button
+            android:layout_below="@id/appitem_down_im"
+            android:id="@+id/appitem_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/download_bt"
+            android:layout_marginTop="8dip"
+           android:clickable="false"
+            android:text="下载" 
+            android:focusable="false"
+            android:textSize="12sp"
+           android:textColor="@drawable/app_item_color"
+            />
+
+        <ImageView
+            android:id="@+id/help"
+            android:layout_width="0.5dip"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:background="#d8d8d8" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bt_down"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/bt_down"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/cat"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:text="类型"
+        android:textColor="@drawable/app_item_color" />
+
+    <TextView
+         android:layout_marginTop="6dip"
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout1"
+        android:text="大小"
+        android:textColor="@drawable/app_item_color"
+        android:textSize="12dp" />
+
+    <TextView
+        android:layout_marginTop="6dip"
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/size"
+        android:layout_alignBottom="@+id/size"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:text="版本"
+        android:textColor="@drawable/app_item_color"
+        android:textSize="12dp" />
+
+</RelativeLayout>

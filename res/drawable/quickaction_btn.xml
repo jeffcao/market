@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <corners android:radius="2dip" />
+
+    <size
+        android:height="30dip"
+        android:width="125dip" />
+
+    <solid android:color="@color/quick_action_btn" />
+
+</shape>

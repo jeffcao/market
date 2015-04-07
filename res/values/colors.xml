@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="list_normal">#f7f9ff</color>
+    <color name="list_press">#a5efff</color>
+    <color name="black">#4b5055</color>
+    <color name="title_back_normal">#eef0f5</color>
+    <color name="title_back_press">#3eadde</color>
+    <color name="progress">#49b6fb</color>
+    <color name="progress_bg">#bcc4ca</color>
+    <color name="stroke_bg">#96acb9</color>
+    <color name="bt_normal">#eef0f5</color>
+    <color name="bt_select">#a5efff</color>
+    <color name="quick_action">#707070</color>
+    <color name="quick_action_btn">#f7f7ff</color>
+     <color name="app_item_nor">#ffffff</color>
+      <color name="app_item_press">#000000</color>
+        <color name="list_bg">#80804C</color>
+
+</resources>

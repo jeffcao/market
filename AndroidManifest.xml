@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tblin.embedmarket"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!--
+        权限说明
+    	1.INTERNET 上网权限
+    	2.ACCESS_NETWORK_STATE 网络状态权限，碰到网络问题的时候需要检测网络状态
+    -->
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <receiver
+            android:name="com.tblin.embedmarket.PackageReceiver"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.tblin.market.ui.EmbedHome"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+          
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tblin.market.ui.InfosActivity"
+            android:screenOrientation="portrait"
+           />
+        <activity android:name="com.tblin.market.ui.DownLoadUI" />
+        <activity android:name="com.tblin.market.ui.LoadManageActivity" />
+        <activity
+            android:name="com.tblin.market.ui.AppListActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tblin.market.ui.ViewBigImgActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <receiver android:name="com.tblin.market.breakdown.LoadBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.tblin.market.breakdown" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.tblin.market.breakdown.DownloadService" >
+        </service>
+        <service android:name="com.tblin.market.breakdown.PackageService" >
+        </service>
+
+        <activity android:name="com.tblin.market.ui.ManageActivity" >
+        </activity>
+        <activity android:name="com.tblin.market.ui.NewLoadManageActivity" 
+            android:launchMode="singleInstance">
+        </activity>
+    </application>
+
+</manifest>

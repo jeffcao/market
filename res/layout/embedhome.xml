@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/testsoft"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/home_id"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/below_bg"
+        android:orientation="horizontal"
+       
+        android:gravity="center"
+         >
+
+        <TextView
+            android:id="@+id/softwarepage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+            android:gravity="center"
+           
+            android:textColor="#b2b4b3"
+            android:textSize="21sp" 
+            android:background="@drawable/embed_soft"
+            />
+
+        <TextView
+            android:id="@+id/downloadpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:gravity="center"
+           
+            android:textColor="#b2b4b3"
+            android:textSize="21sp" 
+            android:background="@drawable/embed_dl2"
+            />
+    </LinearLayout>
+<!-- 游动的滑条。 -->
+    <ImageView
+        android:id="@+id/cursor"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="40dip"
+        android:scaleType="matrix"
+        android:src="@drawable/cursor" 
+        android:visibility="invisible"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/home_id"
+        android:layout_marginBottom="51dp"
+        android:background="@drawable/app_bg"
+         >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/app_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controlpage"
+        android:layout_width="fill_parent"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tiltle_bg"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+         >
+
+        <ImageView
+             android:layout_marginTop="2dip"
+            android:layout_marginLeft="5dip"
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_goback"
+            android:clickable="true"
+            android:onClick="goBack"
+            >
+        </ImageView>
+
+        <EditText
+             android:layout_marginLeft="5dip"
+            android:layout_weight="1"
+            android:id="@+id/ed_serach"
+            android:layout_width="wrap_content"
+            android:layout_height="35dip"
+          android:textSize="16sp"
+            android:background="@drawable/edittext"
+            android:hint="请输入关键词搜索"
+            android:maxLength="10"
+            
+            android:singleLine="true" >
+        </EditText>
+
+        <ImageView
+            android:layout_marginTop="2dip"
+             android:layout_marginLeft="5dip"
+               android:layout_marginRight="5dip"
+            android:id="@+id/bt_serach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:background="@drawable/bt_search"
+            android:clickable="true"
+            android:onClick="goSearch" />
+    </LinearLayout>
+
+</RelativeLayout>

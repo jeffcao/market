@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/set_linear_selector"
+    android:paddingLeft="6dip"
+    android:paddingRight="0dip" >
+
+    <ImageView
+        android:id="@+id/installed_app_item_logo"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/defalut_logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="55.5dip"
+        android:layout_height="55dip"
+        android:layout_alignParentRight="true"
+         android:background="@drawable/download_bt"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/helpbutton"
+            android:layout_width="0.5dip"
+            android:layout_height="50dp"
+           android:layout_gravity="center_vertical"
+            android:background="#d8d8d8" />
+
+        <LinearLayout
+            android:id="@+id/installed_app_down_bt"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" 
+            android:gravity="center_horizontal"
+            
+            >
+
+            <ImageView
+                android:id="@+id/installed_app_down_im"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dip"
+                android:background="@drawable/pause" />
+
+            <Button
+                android:focusable="false"
+                android:clickable="false"
+                android:id="@+id/installed_app_item_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:background="@drawable/download_bt"
+                android:textColor="@drawable/app_item_color"
+              
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.tblin.market.ui.MyTextView
+        android:id="@+id/installed_app_item_name"
+        android:layout_width="fill_parent"
+        android:layout_height="23dip"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dip"
+        android:layout_toLeftOf="@+id/linearLayout1"
+        android:layout_toRightOf="@+id/installed_app_item_logo"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@drawable/app_item_color"
+        android:textSize="@dimen/manage_item_large2" />
+
+    <TextView
+        android:id="@+id/installed_app_item_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/installed_app_item_name"
+        android:layout_marginTop="32dip"
+        android:text="版本"
+        android:textColor="@drawable/app_item_color"
+        android:textSize="@dimen/manage_item_small" />
+
+    <TextView
+        android:id="@+id/installed_app_item_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="70dip"
+        android:layout_marginTop="32dip"
+        android:gravity="right"
+        android:text="大小"
+        android:textColor="@drawable/app_item_color"
+        android:textSize="@dimen/manage_item_small" />
+
+</RelativeLayout>
